@@ -8,6 +8,10 @@
     :license: MIT, see LICENSE for more details.
 """
 
+import os
+import shutil
+import hashlib
+
 __version__ = '1.0'
 
 
