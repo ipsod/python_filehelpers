@@ -1,0 +1,4 @@
+dist
+python_filehelpers.egg-info
+build
+filehelpers/__pycache__
