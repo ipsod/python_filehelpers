@@ -8,12 +8,14 @@
     :license: MIT, see LICENSE for more details.
 """
 
+__version__ = '1.0.2'
+
+
+
 import os
 import shutil
 import hashlib
-
-__version__ = '1.0'
-
+from natsort import natsorted
 
 
 def file_extension(filepath):
@@ -58,9 +60,7 @@ def delete_dir_extra_files(dirname, needs_files):
 
 
 def get_dir_symlinks(dirname, recursive=False):
-    '''
-    Reference: http://stackoverflow.com/questions/6184849
-    '''
+    # Reference: http://stackoverflow.com/questions/6184849
     symlinks = {}
     for filepath in get_dir_contents_filepaths(dirname, ):
         try:
@@ -96,7 +96,7 @@ def get_subdirs(root_dirpath):
 
 def get_dir_files(dirname, *, extensions=None):
     """
-    :param str dirname: path do directory
+    :param str dirname: path to directory
     :param list extensions: list of extensions to look for
     :return: a list of filepaths
     """
